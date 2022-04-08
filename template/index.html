@@ -1,0 +1,141 @@
+{% extends 'base/base.html' %} 
+{% load static %}
+{% block pageTitle %} HomePage {% endblock pageTitle %}   
+
+
+{% block customBody %}
+<body>
+
+<main>
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Python Nerds</h1>
+        <h3 class="fw-light">Scrapping Web Application</h3>
+        <p>
+        <form class="d-flex mt-3" method="POST">
+            {% csrf_token %}
+            <input class="form-control me-2" name="search" type="search" placeholder="Type here..." aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
+            <img src="{% static 'image/electronics.jpeg' %}">
+            <div class="card-body">
+              <p class="card-text">Electronics</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="{% url 'product' 'Electronics' 'laptop' %}"><button type="button" class="btn btn-sm btn-outline-secondary">Laptop</button></a>
+                  <a href="{% url 'product' 'Electronics' 'iphone' %}"><button type="button" class="btn btn-sm btn-outline-secondary">iPhone</button></a>
+                </div>
+                <small class="text-muted"><img src="{% static 'image/Amazon-logo.png' %}" width="50"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
+            <img src="{% static 'image/clothes.png' %}">
+            <div class="card-body">
+              <p class="card-text">Fashion</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <a href="{% url 'product' 'Fashion' 'jeans' %}"><button type="button" class="btn btn-sm btn-outline-secondary">Jeans</button></a>
+                    <a href="{% url 'product' 'Fashion' 'shirts' %}"><button type="button" class="btn btn-sm btn-outline-secondary">Shirts</button></a>
+                    <a href="{% url 'product' 'Fashion' 'tshirts' %}"><button type="button" class="btn btn-sm btn-outline-secondary">T-shirts</button></a>
+                </div>
+                <small class="text-muted"><img src="{% static 'image/Amazon-logo.png' %}" width="50"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
+            <img src="{% static 'image/home-decore.png' %}">
+            <div class="card-body">
+              <p class="card-text">Home Decore</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <a href="{% url 'product' 'Decoration' 'light' %}"><button type="button" class="btn btn-sm btn-outline-secondary">Light</button></a>
+                    <a href="{% url 'product' 'Decoration' 'carpet' %}"><button type="button" class="btn btn-sm btn-outline-secondary">Carpet</button></a>
+                </div>
+                <small class="text-muted"><img src="{% static 'image/Amazon-logo.png' %}" width="50"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
+
+            <img src="{% static 'image/education.png' %}">
+            <div class="card-body">
+              <p class="card-text">Education</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <a href="{% url 'product' 'Education' 'books' %}"><button type="button" class="btn btn-sm btn-outline-secondary">Books</button></a>
+                    <a href="{% url 'product' 'Education' 'pen+and+pencile' %}"><button type="button" class="btn btn-sm btn-outline-secondary">Pen/Pencile</button></a>
+                    <a href="{% url 'product' 'Education' 'bag' %}"><button type="button" class="btn btn-sm btn-outline-secondary">Bag</button></a>
+                </div>
+                <small class="text-muted"><img src="{% static 'image/Amazon-logo.png' %}" width="50"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
+
+            <img src="{% static 'image/furniture.png' %}">
+            <div class="card-body">
+              <p class="card-text">Furniture</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <a href="{% url 'product' 'Furniture' 'table' %}"><button type="button" class="btn btn-sm btn-outline-secondary">Table</button></a>
+                    <a href="{% url 'product' 'Furniture' 'chair' %}"><button type="button" class="btn btn-sm btn-outline-secondary">Chair</button></a>
+                </div>
+                <small class="text-muted"><img src="{% static 'image/Amazon-logo.png' %}" width="50"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
+
+            <img src="{% static 'image/accessories.png' %}">
+            <div class="card-body">
+              <p class="card-text">Accessories</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <a href="{% url 'product' 'Accessories' 'cap' %}"><button type="button" class="btn btn-sm btn-outline-secondary">Cap</button></a>
+                    <a href="{% url 'product' 'Accessories' 'gloves' %}"><button type="button" class="btn btn-sm btn-outline-secondary">Gloves</button></a>
+                    <a href="{% url 'product' 'Accessories' 'goggles' %}"><button type="button" class="btn btn-sm btn-outline-secondary">Goggles</button></a>
+                </div>
+                <small class="text-muted"><img src="{% static 'image/Amazon-logo.png' %}" width="50"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+</body>
+
+{% endblock customBody %}
