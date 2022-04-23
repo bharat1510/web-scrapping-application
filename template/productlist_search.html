@@ -1,0 +1,81 @@
+{% extends 'base/base.html' %} 
+{% load static %}
+{% block pageTitle %} {{productName}} {% endblock pageTitle %}   
+
+
+{% block customBody %}
+<body>
+
+<main>
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Python Nerds</h1>
+        <h3 class="fw-light">Scapping Web Application</h3>
+        <p>
+        {% if productName %}
+          <h5 class="fw-light">You have searched for <span style="color:red;font-weight: 600;">"{{productName}}"</span></h5>
+        {% else %}
+        <form class="d-flex mt-3" method="POST">
+            {% csrf_token %}
+            <input class="form-control me-2" name="search" type="search" placeholder="Type here..." aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row mb-3">
+        <p style="font-size: 13px;color: rgb(223, 56, 56);">*These data is fetched from official site of the Amazon.com and displaying for the same. </p>
+        <h2 style="color: rgb(70, 133, 187);font-weight: 700;">Searched Result -</h2>
+      </div>
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      {% if productDict %}
+        {% for key,value in productDict.items %}
+        <div class="col-md-12">
+          <div class="card shadow-sm">
+            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
+            <!-- <img src="{% static 'image/electronics.jpeg' %}"> -->
+            <div class="card-body">
+              <p class="card-text">{{forloop.counter}} &nbsp;&nbsp; {{key}} &nbsp;&nbsp; <span class="badge rounded-pill bg-warning text-dark">{{productName}}</span></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Price</button>
+                  <a href="https://www.amazon.ca/s?k={{key}}" target="_blank"><button type="button" class="btn btn-sm btn-outline-success">{{value}}</button></a>
+                </div>
+                <small class="text-muted"><img src="{% static 'image/Amazon-logo.png' %}" alt="Amazon Logo" width="50"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        {% else %}
+          <div class="col-md-12">
+            <div class="card shadow-sm">
+              <div class="card-body bg-danger">
+                <p class="card-text"> Something wents wrong. Please try again later.</p>
+              </div>
+            </div>
+          </div>
+      {% endif %}
+
+      </div>
+
+      <div class="mt-5" style="text-align: center;">
+        <a href="/"><button type="button" class="btn btn-sm btn-outline-danger"><i class="fa fa-reply"></i>&nbsp;Back to Home</button></a>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+</body>
+
+{% endblock customBody %}
