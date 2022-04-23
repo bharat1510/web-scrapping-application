@@ -15,13 +15,13 @@ The growth of e-commerce in global markets has pushed the current market researc
 - BeautifulSoup Tool
 
 # Preview of Application
-![Home Page](https://drive.google.com/file/d/11Kz_3eqJK-r2JQsSlGhwWDEZ-t5ktJLS/view?usp=sharing)
+![Home Page](https://github.com/bharat1510/image-for-readme.md/blob/master/Web%20Scraping%20App%20-%201.png)
 
-![Customised Navigation Bar](https://drive.google.com/file/d/12lqj-TfSbS3hpYLDRrgBbi4fixBpbG5q/view?usp=sharing)
+![Customised Navigation Bar](https://github.com/bharat1510/image-for-readme.md/blob/master/Web%20Scraping%20App%20-%202.png)
 
-![Searched Result for item Laptop](https://drive.google.com/file/d/19n2FQgF_-3tH9yybN8GCbFV4OyldKM7A/view?usp=sharing)
+![Searched Result for item Laptop](https://github.com/bharat1510/image-for-readme.md/blob/master/Web%20Scraping%20App%20-%203.png)
 
-![Search Bar Functionality](https://drive.google.com/file/d/1j1miKTR84lhUbofp9H6iBGA69cNdSN-J/view?usp=sharing)
+![Search Bar Functionality](https://github.com/bharat1510/image-for-readme.md/blob/master/Web%20Scraping%20App%20-%204.png)
 
 
 
