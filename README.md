@@ -11,16 +11,20 @@ The growth of e-commerce in global markets has pushed the current market researc
 - jQuery
 
 ### Backend Technologies
-- Django (Python Web Framework)
+- Django (Python Web Framework)
 - BeautifulSoup Tool
 
 # Preview of Application
+### Home Page
 ![Home Page](https://github.com/bharat1510/image-for-readme.md/blob/master/Web%20Scraping%20App%20-%201.png)
 
+### Customised Navigation Bar
 ![Customised Navigation Bar](https://github.com/bharat1510/image-for-readme.md/blob/master/Web%20Scraping%20App%20-%202.png)
 
+### Searched Result for item Laptop
 ![Searched Result for item Laptop](https://github.com/bharat1510/image-for-readme.md/blob/master/Web%20Scraping%20App%20-%203.png)
 
+### Search Bar Functionality
 ![Search Bar Functionality](https://github.com/bharat1510/image-for-readme.md/blob/master/Web%20Scraping%20App%20-%204.png)
 
 
